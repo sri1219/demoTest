@@ -1,7 +1,6 @@
 package test;
 
-import java.util.concurrent.TimeUnit;
-
+import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,23 +9,22 @@ import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-public WebDriver driver;
-		
-	@BeforeMethod
-	public void setup()
-	{
-		WebDriverManager.chromedriver().setup();
-		driver= new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.get("https://magento.softwaretestingboard.com/");
-	}
-	
-	@AfterMethod
-	public void tearDown()
-	{
-		if(driver!=null)
-			driver.quit();
-	}
-	
+    public WebDriver driver;
+
+    @BeforeMethod
+    public void setup() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        // Flipkart URL
+        driver.get("http://10.13.20.123:9002/");
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        if (driver != null)
+            driver.quit();
+    }
 }

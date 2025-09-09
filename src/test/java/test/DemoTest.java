@@ -1,25 +1,19 @@
-package test;
+// package test;
 
-import org.testng.annotations.Test;
+// import org.testng.Assert;
+// import org.testng.annotations.Test;
 
-import pages.HomePage;
+// public class DemoTest extends BaseTest {
 
-public class DemoTest extends BaseTest
-{
+//     @Test
+//     public void verifyFlipkartTitle() {
+//         // Get the page title
+//         String actualTitle = driver.getTitle();
 
-    @Test
-    public void DemoExample() throws InterruptedException
-    {
-    
-    	// Application URL : https://magento.softwaretestingboard.com/
-    	    
-        HomePage homepage = new HomePage(driver);
-        homepage.navigateTo("Women","Tops","Tees");
-        
-        // 1. Select any product
-        
-        // 2. Select the size, color and click Add to cart
-		
-		// 3. Verify the message "You added <ProdcutName> to your shopping cart.”
-  }
-}
+//         // Expected Flipkart homepage title (verify in browser)
+//         String expectedTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
+
+//         // Assertion
+//         Assert.assertEquals(actualTitle, expectedTitle, "Page title mismatch");
+//     }
+// }
