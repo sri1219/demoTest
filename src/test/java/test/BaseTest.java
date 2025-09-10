@@ -19,7 +19,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // Flipkart URL
-        driver.get("http://10.13.20.123:9002/");
+        driver.get("htpp://localhost:9002");
     }
 
     @AfterMethod
